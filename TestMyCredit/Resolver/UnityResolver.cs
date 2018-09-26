@@ -1,11 +1,10 @@
-﻿using Microsoft.Practices.Unity;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Web.Http.Dependencies;
 using Unity;
 using Unity.Exceptions;
 
-namespace ProductsApp.Resolver
+namespace TestMyCredit.Resolver
 {
     public class UnityResolver : IDependencyResolver
     {
