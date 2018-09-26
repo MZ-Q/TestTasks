@@ -9,9 +9,16 @@ namespace TestMyCredit.Controllers
 {
     public class HelloController : ApiController
     {
+        private Models.IGreeter m_greeter;
+
+        public HelloController(Models.IGreeter greeter)
+        {
+            m_greeter = greeter;
+        }
+
         public string Get()
         {
-            return "Hi there!";
+            return m_greeter.SayHello();
         }
     }
 }
