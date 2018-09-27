@@ -19,7 +19,7 @@ namespace TestMyCredit
             container.RegisterType<Models.IGreeter, Models.HiGreating>(new ContainerControlledLifetimeManager());
 
             // Use default(TransientLifetimeManager) lifetime mgr because of re-construction Conrollers on update
-            container.RegisterType<Controllers.HiController>(new ContainerControlledLifetimeManager(), new InjectionConstructor(container.Resolve<Models.IGreeter>()));
+            container.RegisterType<Controllers.HiController>(new InjectionConstructor(container.Resolve<Models.IGreeter>()));
 
             // Same logic for the "Hello" controller
             container.RegisterType<Models.IGreeter, Models.HelloGreating>(new ContainerControlledLifetimeManager());
